@@ -4,7 +4,7 @@
 
 /ip firewall filter
 add action=drop chain=forward comment="block ip bokep" dst-address-list=ipbokep \
-    dst-port=80 protocol=tcp src-address-list="ip lokal"
+    dst-port=80,443 protocol=tcp
 	
 /ip firewall address-list
 add address=164.68.111.161 list=ipbokep
